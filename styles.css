@@ -138,7 +138,7 @@ header, footer, section, img {
 
 .founders {
   text-align: center;
-  padding: 50px 20px;
+  padding: 30px;
   background-color: #f4f4f4;
 }
 
@@ -154,18 +154,20 @@ header, footer, section, img {
 }
 
 .founder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+ /* display: flex;*/
+ /*flex-direction: column;*/
+ /*align-items: center;*/
   text-align: center;
   background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 15px;
+  border: 1px solid;
   border-radius: 10px;
-  max-width: 300px;
-  height: 100%;
-  margin: 0 auto 20px;
+ /*max-width: 300px;*/
+ /*height: 100%;*/
+ /*margin: 0 auto 20px;*/
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
+ /*transition: transform 0.3s, box-shadow 0.3s;*/
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   opacity: 0; /* Hide initially */
   transform: translateX(100%); /* Start off-screen*/
@@ -182,7 +184,7 @@ header, footer, section, img {
 }
 
 .founders h2 {
-  font-size: 2.5em;
+  font-size: 28px;
   margin-bottom: 20px;
   color: #333;
 }
@@ -192,7 +194,7 @@ header, footer, section, img {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.founder-info {
+/*.founder-info {
   margin-top: 20px;
   text-align: center;
   display: none;
@@ -210,27 +212,27 @@ header, footer, section, img {
 .founder-info p {
   font-size: 1em;
   line-heght: 1.5;
-}
+}*/
 
 .founder img {
   width: 100%;
   height: auto;
   border-radius: 50%;
-  margin-bottom: 15px;
-  max-width: 150px;
+  margin-bottom: 10px;
+ /* max-width: 150px;*/
 }
 
 .founder h3 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  color: #444;
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #4CAF50;
 }
 
 .founder p {
-  font-size: 1em;
-  color: #666;
-  margin: 0;
-  line-height: 1.5;
+  font-size: 14px;
+  color: #555;
+ /*margin: 0;*/
+ /*line-height: 1.5;*/
 }
 
 .founders-container {
@@ -238,7 +240,7 @@ header, footer, section, img {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-  align-items: centre;
+ /*align-items: centre;*/
   gap: 20px; /* Space between co-founder cards */
   animation: slide-right-left 5s ease-in-out infinite;
   overflow: hidden; /* Ensures content stays within bounds */
