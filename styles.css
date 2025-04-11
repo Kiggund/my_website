@@ -196,7 +196,6 @@ header, footer, section, {
 .founder p {
   font-size: 0.8rem;
   color: #555;
- /*margin: 0;*/
   line-height: 1.2;
   font-size: 0.9rem;
   text-align: justify;
@@ -209,35 +208,10 @@ header, footer, section, {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
- /*align-items: centre;*/
   gap: 20px; /* Space between co-founder cards */
   animation: slide-right-left 5s ease-in-out infinite;
   overflow: hidden; /* Ensures content stays within bounds */
 }
-
-@keyframes slide-right-left {
-  0% {
-    /*transform: translateX(100%); /* Start offscreen from the right */
-  }
-  50% {
-   /* transform: translateX(0); /* Center position */
-  }
-  100% {
-   /* transform: translateX(-100%); /* Offscreen to the left */
-  }
-}
-
-/*.founder {
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  flex: 0 0 300px; /* Keeps each card a fixed size */
-}
-
-/*.founders-container:hover {
-  animation-play-state: paused;
-}*/
 
 @media (max-width: 768px) {
   .founders-container {
@@ -367,129 +341,66 @@ img, video {
     max-width: 100%;
     height: auto;
 }
-/* Responsive Design */
-@media (max-width: 768px) {
-  .nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
+/*responsive design*/
 
-  .hero h1 {
-    font-size: 1.5em;
-  }
+@media (max-width: 1024px) { /* Tablets */
+    .nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-  .team-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .team-member {
-    width: 100%;
-    max-width: 300px;
-  }
-.contact {
-  text-align: center;
-  padding: 50px 30px;
-  background: #f4f4f4;
-  margin: 40px auto;
-  max-width: 1200px;
-  box-shadow: 0 4px 6px rgbs(0, 0, 0, 0.1);
-  }
-
-.contact h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  }
-
-.contact a {
-  display: inline-block;
-  font-size: 1.1em;
-  margin: 10px 0;
-  text-decoration: none;
-  color: #333;
-  }
-
-.contact a:hover {
-  color: #ffcc00;
-  }
+    .team-container, .founders-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
 }
 
-@media (max-width: 480px) {
-    .container {
+@media (max-width: 768px) { /* Smartphones */
+    .nav ul {
+        flex-direction: column; /* Stack navigation links */
         padding: 10px;
-        width: 100%;
+    }
+
+    .home-content {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .founders-container {
+        grid-template-columns: 1fr; /* Single column */
+    }
+
+    .founder {
+        padding: 8px;
+        margin: 8px 0;
     }
 }
 
-@media (max-width: 480px) {
-  .header {
-    flex-direction: column;
-    text-align: center;
-  }
+@media (max-width: 480px) { /* Very Small Screens */
+    .logo img {
+        width: 150px;
+    }
 
-  .hero {
-    padding: 50px 10px;
-  }
+    .nav ul li {
+        font-size: 0.9rem;
+    }
 
-  .hero h1 {
-    font-size: 1.5em;
-  }
+    .home-content h1 {
+        font-size: 1.5rem;
+    }
 
-  .team h2 {
-    font-size: 1.5em;
-  }
+    .founder img {
+        width: 70px; /* Adjust image size */
+        height: 70px;
+        border-radius: 70%; /* Rounded corners */
+    }
 
-  .team-container {
-    flex-direction: column;
-  }
+    .founder h3 {
+        font-size: 0.9rem;
+    }
 
-p  .team-member {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav {
-      display: none; /* Hide standard nav */
-    }
-  .hamburger {
-      display: block; /* Show hamburger menu */
-    }
-}
-/* Responsive for Tablets */
-/*@media (max-width: 768px) {
-    .item {
-        flex: 1 1 calc(50% - 10px); /* 2 items per row */
-    }
-   /* .container {
-        flex-direction: column; /* Adjust content layout */
-    }
-}
-
-/* Responsive for Mobile Phones */
-/*@media (max-width: 480px) {
-    .item {
-        flex: 1 1 100%; /* Single column layout */
-    }
-   /* body {
-        font-size: 14px; /* Adjust font size for smaller screens */
-    }
-}
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.5em; /* Slightly smaller header */
-    }
-    p {
-        font-size: 1em; /* Regular paragraph size for phones */
-    }
-}
-body {
-    overflow-x: hidden; /* Eliminate horizontal scrolling */
-    padding: 10px;
-}
-@media (max-width: 480px) {
-    button {
-        padding: 12px 20px; /* Larger touch targets */
-        font-size: 1em;
+    .founder p {
+        font-size: 0.8rem;
     }
 }
